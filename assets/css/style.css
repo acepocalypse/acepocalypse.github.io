@@ -92,3 +92,10 @@ main {
   border-radius: 10px;
   background: white;
 }
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  background: white;
+}
