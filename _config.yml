@@ -1,0 +1,9 @@
+title: Akmal Setiawan
+email: your-email@example.com
+description: >-
+  Personal site to showcase resume and projects.
+baseurl: ""
+url: "https://yourusername.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
