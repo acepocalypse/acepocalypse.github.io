@@ -67,21 +67,25 @@ main {
 }
 
 .site-header {
+  height: 12.5vh; /* 1/8th of viewport height */
+  max-height: 12.5vh;
   display: flex;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: white; /* optional, helps if content is white too */
+  padding: 0 2rem;
   border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.site-logo {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  display: block;
 }
 
 .logo-link {
   display: inline-block;
-}
-
-.site-logo {
-  height: 40px;
-  width: auto;
-  max-width: 100%;
 }
 
 .hero {
