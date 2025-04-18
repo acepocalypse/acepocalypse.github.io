@@ -66,10 +66,22 @@ main {
   padding: 0 1rem;
 }
 
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white; /* optional, helps if content is white too */
+  border-bottom: 1px solid #eee;
+}
+
+.logo-link {
+  display: inline-block;
+}
+
 .site-logo {
   height: 40px;
   width: auto;
-  display: block;
+  max-width: 100%;
 }
 
 .hero {
