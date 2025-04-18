@@ -67,20 +67,18 @@ main {
 }
 
 .site-header {
-  height: 12.5vh; /* Max 1/8th of viewport height */
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  overflow: hidden; /* Make sure nothing spills out */
+  /* Removed fixed height, let content dictate size */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center items */
+  padding: 1rem; /* Add padding around the content */
 }
 
 .site-logo {
-  height: 100%;
-  width: auto;
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
+  height: 20px; /* Set a specific small height for the logo */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure logo scales nicely */
+  display: block; /* Treat logo as a block element */
+  /* Removed percentage heights */
 }
 
 .logo-link {
