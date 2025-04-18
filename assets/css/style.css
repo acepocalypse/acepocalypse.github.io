@@ -73,6 +73,13 @@ main {
   padding: 1rem; /* Add padding around the content */
 }
 
+.floating-logo {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+}
+
 .site-logo {
   height: 48px; /* Increased height - adjust as needed */
   width: auto; /* Maintain aspect ratio */
