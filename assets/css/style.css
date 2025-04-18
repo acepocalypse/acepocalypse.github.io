@@ -74,7 +74,7 @@ main {
 }
 
 .site-logo {
-  height: 20px; /* Set a specific small height for the logo */
+  height: 30px; /* Set a specific small height for the logo */
   width: auto; /* Maintain aspect ratio */
   object-fit: contain; /* Ensure logo scales nicely */
   display: block; /* Treat logo as a block element */
