@@ -88,9 +88,25 @@ main {
   /* Removed percentage heights */
 }
 
+
 .logo-link {
   display: inline-block;
 }
+
+.center-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* full viewport height */
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
 
 .hero {
   text-align: center;
