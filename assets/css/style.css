@@ -1,3 +1,4 @@
+/* GENERAL STYLES */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: white;
@@ -8,41 +9,40 @@ body {
   line-height: 1.6;
 }
 
-header {
-  padding: 1rem;
+/* HOMEPAGE ONLY: Disable scroll and fit content to screen */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
+/* HOMEPAGE WRAPPER FOR CENTERING */
+.fullscreen-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.intro {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* HEADINGS */
 h1, h2, h3 {
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
+/* LINKS */
 a {
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
-}
-
-ul {
-  padding-left: 1.25rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-footer {
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #666;
-  text-align: center;
-}
-
-@media (max-width: 600px) {
-  body {
-    margin: 2rem auto;
-  }
 }
 
 nav {
@@ -60,17 +60,37 @@ nav a {
   font-weight: 600;
 }
 
+/* PAGE STRUCTURE */
 main {
   max-width: 800px;
   margin: 3rem auto;
   padding: 0 1rem;
 }
 
+header {
+  padding: 1rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* LOGO STYLING */
 .site-header {
-  /* Removed fixed height, let content dictate size */
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Vertically center items */
-  padding: 1rem; /* Add padding around the content */
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }
 
 .floating-logo {
@@ -81,37 +101,17 @@ main {
 }
 
 .site-logo {
-  height: 48px; /* Increased height - adjust as needed */
-  width: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure logo scales nicely */
-  display: block; /* Treat logo as a block element */
-  /* Removed percentage heights */
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
-
 
 .logo-link {
   display: inline-block;
 }
 
-.center-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* full viewport height */
-  text-align: center;
-  padding: 2rem;
-}
-
-.intro {
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-
-.hero {
-  text-align: center;
-}
-
+/* BUTTON STYLES */
 .btn,
 .btn-outline {
   padding: 0.75rem 1.5rem;
@@ -132,16 +132,18 @@ main {
   background: none;
 }
 
-.project-card {
+/* CARD STYLES */
+.project-card,
+.achievement-card {
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 10px;
   background: white;
 }
 
-.achievement-card {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 10px;
-  background: white;
+/* MOBILE TWEAKS */
+@media (max-width: 600px) {
+  body {
+    margin: 2rem auto;
+  }
 }

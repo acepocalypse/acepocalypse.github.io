@@ -17,7 +17,7 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+<body class="{% if page.title == 'Home' %}no-scroll{% endif %}">
   <header class="floating-logo">
     <a href="{{ '/' | relative_url }}">
       <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="site-logo">
