@@ -144,6 +144,26 @@ li {
   background: white;
 }
 
+.homepage-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.homepage-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #007bff;
+  transition: color 0.2s ease;
+}
+
+.homepage-links a:hover {
+  color: #0056b3;
+}
+
+
 /* MOBILE TWEAKS */
 @media (max-width: 600px) {
   body {
