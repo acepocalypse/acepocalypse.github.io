@@ -23,7 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 80px); /* Adjust the 80px to your actual header height */
+  height: calc(100vh - 70px); /* Adjust the 80px to your actual header height */
   text-align: center;
   padding: 1rem;
   box-sizing: border-box;
