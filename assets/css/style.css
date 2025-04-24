@@ -217,6 +217,8 @@ li {
   padding: 1rem;
   border-radius: 16px;
   background: white;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 
