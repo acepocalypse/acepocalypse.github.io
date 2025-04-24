@@ -43,10 +43,11 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 70px);
+  height: 100vh;
   box-sizing: border-box;
   text-align: center;
   padding: 0 1rem;
+  margin-top: -80px; /* counteracts sticky header pushing it down */
 }
 
 .intro {
