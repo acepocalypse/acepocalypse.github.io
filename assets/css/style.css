@@ -41,10 +41,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 70px);
-  padding: 1rem;
+  min-height: 100vh;
+  padding-top: 100px; /* makes room for fixed/sticky header */
+  padding-bottom: 1rem;
   box-sizing: border-box;
   text-align: center;
+  flex-direction: column;
 }
 
 .intro {
@@ -222,5 +224,9 @@ li {
 
   .site-header nav {
     margin-left: 0;
+  }
+
+  .fullscreen-center {
+    padding-top: 120px;
   }
 }
