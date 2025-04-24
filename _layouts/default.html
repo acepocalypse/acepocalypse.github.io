@@ -21,11 +21,22 @@
 </head>
 
 <body class="{% if page.title == 'Home' %}no-scroll{% endif %}">
-  <header class="floating-logo">
-    <a href="{{ '/' | relative_url }}">
+  <header class="{% if page.title == 'Home' %}floating-logo{% else %}site-header{% endif %}">
+    <a href="{{ '/' | relative_url }}" class="logo-link">
       <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="site-logo">
     </a>
+  
+    {% unless page.title == "Home" %}
+    <nav>
+      <a href="/projects">Projects</a>
+      <a href="/achievements">Achievements</a>
+      <a href="https://linkedin.com/in/akmalset" target="_blank">LinkedIn</a>
+      <a href="/assets/pdf/Setiawan,%20Ace%20Resume.pdf" target="_blank">Resume</a>
+      <a href="https://github.com/acepocalypse" target="_blank">GitHub</a>
+    </nav>
+    {% endunless %}
   </header>
+  
 
   <main class="{% if page.title == 'Home' %}fullscreen-center{% endif %}">
     {{ content }}

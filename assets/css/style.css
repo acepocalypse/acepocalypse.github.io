@@ -86,6 +86,17 @@ nav a {
   font-weight: 600;
 }
 
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-header nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 
 /* === STRUCTURE === */
 main {
@@ -120,7 +131,13 @@ li {
 .site-header {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .floating-logo {
