@@ -10,8 +10,7 @@ html, body {
 }
 
 body {
-  max-width: 600px;
-  margin: 4rem auto;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
@@ -78,7 +77,6 @@ nav {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-left: auto;
 }
 
 nav a {
@@ -95,7 +93,7 @@ nav a:hover {
 }
 
 .site-header nav {
-  margin-left: auto;
+  margin-left: 2rem;
 }
 
 .site-header nav a {
@@ -115,7 +113,9 @@ main {
 }
 
 header {
-  padding: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
 }
 
 footer {
@@ -137,17 +137,12 @@ li {
 
 
 /* === LOGO === */
-.site-header,
-.floating-logo {
+.site-header {
   display: flex;
   align-items: center;
-  background: #fff;
-  padding: 1rem;
-}
-
-.site-header {
   justify-content: flex-start;
   gap: 2rem;
+  background: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -219,7 +214,7 @@ li {
     gap: 1rem;
   }
 
-  nav {
+  .site-header nav {
     margin-left: 0;
   }
 }
