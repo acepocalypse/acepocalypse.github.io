@@ -10,8 +10,9 @@ html, body {
 }
 
 body {
-  margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -113,9 +114,11 @@ main {
 }
 
 header {
+  width: 100%;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 
 footer {
@@ -147,6 +150,9 @@ li {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
 }
 
 .floating-logo {
