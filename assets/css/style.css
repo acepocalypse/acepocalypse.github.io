@@ -50,21 +50,6 @@ a {
   margin-top: -80px; /* counteracts sticky header pushing it down */
 }
 
-body.home-page .fullscreen-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  flex-direction: column;
-  text-align: center;
-  padding: 2rem;
-}
-
-body.home-page .intro {
-  max-width: 1200px;
-  width: 100%;
-}
-
 .intro {
   max-width: 600px;
 }
