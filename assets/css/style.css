@@ -54,12 +54,6 @@ a {
   max-width: 600px;
 }
 
-.homepage-links-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .homepage-links {
   display: flex;
   flex-wrap: wrap;
@@ -88,6 +82,7 @@ a {
   background-color: #f8f8f8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
+
 
 /* === NAVIGATION === */
 nav {
