@@ -35,15 +35,15 @@
     </ul>
   </nav>
 
-  <div class="main-content">
-    <header>
-      <h1><strong>My Projects</strong></h1>
-      <p>Machine learning, Web Apps, Data Analysis works</p>
-      <nav class="back-nav">
-        <a href="../index.html">← Back to Home</a>
-      </nav>
-    </header>
+  <header>
+    <h1><strong>My Projects</strong></h1>
+    <p>Machine learning, Web Apps, Data Analysis works</p>
+    <nav class="back-nav">
+      <a href="../index.html">← Back to Home</a>
+    </nav>
+  </header>
 
+  <div class="main-content">
     <div class="projects-container">
       <h2 id="research" class="section-header">Research Projects</h2>
     <div class="projects-grid">
@@ -217,30 +217,6 @@
         }
       });
     });
-
-    // Update active navigation link based on scroll position
-    function updateActiveLink() {
-      const sections = document.querySelectorAll('h2[id]');
-      const scrollPosition = window.scrollY + 100;
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${sectionId}`) {
-              link.classList.add('active');
-            }
-          });
-        }
-      });
-    }
-
-    window.addEventListener('scroll', updateActiveLink);
-    updateActiveLink(); // Call once on page load
   </script>
 </body>
 </html>

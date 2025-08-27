@@ -1,6 +1,4 @@
 body {
-  display: flex;
-  flex-direction: row;
   margin: 0;
   padding: 0;
 }
@@ -51,12 +49,6 @@ body {
   transform: translateX(4px);
 }
 
-.nav-link.active {
-  background: rgba(51, 51, 51, 0.15);
-  color: #111111;
-  border-left: 3px solid #333333;
-}
-
 .nav-toggle {
   display: none;
   position: fixed;
@@ -98,18 +90,18 @@ body {
 }
 
 .main-content {
-  flex: 1;
   margin-left: 200px;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem;
 }
 
 header {
-  margin-left: -200px;
-  margin-right: -2rem;
   text-align: center;
-  width: 100vw;
-  padding: 2rem 2rem 0.5rem;
+  width: 100%;
+  padding: 2rem 2rem 0.25rem;
+  margin-bottom: 0.2rem !important;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1001;
 }
 
 .section-header {
@@ -160,7 +152,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.8rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
 }
 
 .projects-grid:last-of-type {
