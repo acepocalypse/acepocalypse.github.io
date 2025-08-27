@@ -103,6 +103,15 @@ body {
   padding: 2rem;
 }
 
+header {
+  margin-left: -200px;
+  margin-right: -2rem;
+  text-align: center;
+  width: 100vw;
+  padding: 2rem 2rem 0.5rem;
+  box-sizing: border-box;
+}
+
 .section-header {
   font-size: 1.6rem;
   font-weight: 600;
