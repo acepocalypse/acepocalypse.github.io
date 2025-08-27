@@ -25,12 +25,25 @@ body {
 }
 
 header {
-  text-align: center;
-  margin-bottom: 5.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+.header-text {
+  text-align: left;
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 270;
     color: #222;
 }
@@ -41,7 +54,7 @@ header h1 strong {
 }
 
 header p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #555;
   margin-top: 0.5rem;
 }
@@ -114,11 +127,16 @@ header p {
   }
   
   header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   header p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .profile-pic {
+    height: 80px;
+    width: 80px;
   }
 }
 
