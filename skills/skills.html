@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ace's Skills</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="skills-style.css">
-  
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
@@ -26,221 +27,312 @@
     </nav>
   </header>
 
-  <div class="skills-container">
-    <div class="skills-columns">
-      <div class="skills-section">
-        <h3>Programming Languages</h3>
+  <main class="skills-main">
+
+    <div class="skills-grid">
+      <!-- Programming Languages -->
+      <section class="skill-category">
+        <div class="category-header">
+          <i class="fas fa-code category-icon"></i>
+          <h3>Programming Languages</h3>
+        </div>
         <div class="skills-list">
           <div class="skill-item">
-            <span class="skill-name">Python</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fab fa-python skill-icon"></i>
+                <span class="skill-name">Python</span>
+              </div>
+              <span class="skill-level">Expert</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="95"></div>
+            </div>
+            <p class="skill-description">Primary language for data science and development</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">SQL</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-database skill-icon"></i>
+                <span class="skill-name">SQL</span>
+              </div>
+              <span class="skill-level">Advanced</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="75"></div>
+            </div>
+            <p class="skill-description">Database querying and data manipulation</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">R</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-chart-bar skill-icon"></i>
+                <span class="skill-name">R</span>
+              </div>
+              <span class="skill-level">Advanced</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="80"></div>
+            </div>
+            <p class="skill-description">Statistical analysis and visualization</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">JavaScript</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fab fa-js-square skill-icon"></i>
+                <span class="skill-name">JavaScript</span>
+              </div>
+              <span class="skill-level">Intermediate</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="60"></div>
+            </div>
+            <p class="skill-description">Frontend development and web applications</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">HTML/CSS</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fab fa-html5 skill-icon"></i>
+                <span class="skill-name">HTML/CSS</span>
+              </div>
+              <span class="skill-level">Expert</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="90"></div>
+            </div>
+            <p class="skill-description">Modern web development and responsive design</p>
           </div>
         </div>
-      </div>
+      </section>
 
-     
-
-      <div class="skills-section">
-        <h3>Tools & Frameworks</h3>
+      <!-- Tools & Frameworks -->
+      <section class="skill-category">
+        <div class="category-header">
+          <i class="fas fa-tools category-icon"></i>
+          <h3>Tools & Frameworks</h3>
+        </div>
         <div class="skills-list">
           <div class="skill-item">
-            <span class="skill-name">Pandas/NumPy</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-table skill-icon"></i>
+                <span class="skill-name">Pandas/NumPy</span>
+              </div>
+              <span class="skill-level">Expert</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="95"></div>
+            </div>
+            <p class="skill-description">Data manipulation and scientific computing</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Scikit-learn</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-brain skill-icon"></i>
+                <span class="skill-name">Scikit-learn</span>
+              </div>
+              <span class="skill-level">Advanced</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="85"></div>
+            </div>
+            <p class="skill-description">Machine learning algorithms and modeling</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">TensorFlow/Keras</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-network-wired skill-icon"></i>
+                <span class="skill-name">TensorFlow/Keras</span>
+              </div>
+              <span class="skill-level">Intermediate</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="65"></div>
+            </div>
+            <p class="skill-description">Deep learning and neural networks</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">FastAPI</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-server skill-icon"></i>
+                <span class="skill-name">FastAPI</span>
+              </div>
+              <span class="skill-level">Advanced</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="80"></div>
+            </div>
+            <p class="skill-description">REST API development and backend services</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Streamlit</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-chart-line skill-icon"></i>
+                <span class="skill-name">Streamlit</span>
+              </div>
+              <span class="skill-level">Advanced</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="85"></div>
+            </div>
+            <p class="skill-description">Data app development and prototyping</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Git/GitHub</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fab fa-git-alt skill-icon"></i>
+                <span class="skill-name">Git/GitHub</span>
+              </div>
+              <span class="skill-level">Advanced</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="85"></div>
+            </div>
+            <p class="skill-description">Version control and collaboration</p>
           </div>
         </div>
-      </div>
+      </section>
 
-    <div class="skills-section">
-        <h3>Data Science & ML</h3>
+      <!-- Data Science & ML -->
+      <section class="skill-category">
+        <div class="category-header">
+          <i class="fas fa-brain category-icon"></i>
+          <h3>Data Science & ML</h3>
+        </div>
         <div class="skills-list">
           <div class="skill-item">
-            <span class="skill-name">Machine Learning</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-brain skill-icon"></i>
+                <span class="skill-name">Machine Learning</span>
+              </div>
+              <span class="skill-level">Advanced</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="85"></div>
+            </div>
+            <p class="skill-description">Supervised and unsupervised learning</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Deep Learning</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-robot skill-icon"></i>
+                <span class="skill-name">Deep Learning</span>
+              </div>
+              <span class="skill-level">Intermediate</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="70"></div>
+            </div>
+            <p class="skill-description">Neural networks and computer vision</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Data Visualization</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-chart-bar skill-icon"></i>
+                <span class="skill-name">Data Visualization</span>
+              </div>
+              <span class="skill-level">Expert</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="95"></div>
+            </div>
+            <p class="skill-description">Creating compelling visual stories</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Statistical Analysis</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-calculator skill-icon"></i>
+                <span class="skill-name">Statistical Analysis</span>
+              </div>
+              <span class="skill-level">Expert</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="90"></div>
+            </div>
+            <p class="skill-description">Hypothesis testing and experimental design</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="skills-section">
-        <h3>Analytics & Visualization</h3>
+      <!-- Analytics & Visualization -->
+      <section class="skill-category">
+        <div class="category-header">
+          <i class="fas fa-chart-bar category-icon"></i>
+          <h3>Analytics & Visualization</h3>
+        </div>
         <div class="skills-list">
           <div class="skill-item">
-            <span class="skill-name">Tableau</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-chart-pie skill-icon"></i>
+                <span class="skill-name">Tableau</span>
+              </div>
+              <span class="skill-level">Advanced</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="80"></div>
+            </div>
+            <p class="skill-description">Business intelligence dashboards</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Power BI</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-chart-line skill-icon"></i>
+                <span class="skill-name">Power BI</span>
+              </div>
+              <span class="skill-level">Intermediate</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="65"></div>
+            </div>
+            <p class="skill-description">Data modeling and report development</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Excel</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-file-excel skill-icon"></i>
+                <span class="skill-name">Excel</span>
+              </div>
+              <span class="skill-level">Expert</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="95"></div>
+            </div>
+            <p class="skill-description">Advanced formulas and data analysis</p>
           </div>
 
           <div class="skill-item">
-            <span class="skill-name">Matplotlib/Seaborn</span>
-            <div class="skill-dots">
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
-              <span class="dot filled"></span>
+            <div class="skill-info">
+              <div class="skill-name-with-icon">
+                <i class="fas fa-chart-area skill-icon"></i>
+                <span class="skill-name">Matplotlib/Seaborn</span>
+              </div>
+              <span class="skill-level">Expert</span>
             </div>
+            <div class="progress-container">
+              <div class="progress-bar" data-level="90"></div>
+            </div>
+            <p class="skill-description">Python-based plotting and visualization</p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
+  </main>
 
 </body>
 </html>
