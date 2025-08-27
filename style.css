@@ -25,6 +25,11 @@ body {
 }
 
 header {
+  text-align: center;
+  margin-bottom: 5.5rem;
+}
+
+.home-header {
   display: flex;
   align-items: center;
   margin-bottom: 7rem;
