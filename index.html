@@ -50,5 +50,29 @@
       day: 'numeric'
     });
   </script>
+
+  <!-- Preload images for other pages to improve user experience -->
+  <script>
+    window.addEventListener('load', () => {
+      const imageUrls = [
+        'assets/images/sc project.jpg',
+        'assets/images/taps project.jpg',
+        'assets/images/issnresolver.png',
+        'assets/images/ontheway project crop.png',
+        'assets/images/thrill2.png',
+        'assets/images/bluffden.png',
+        'assets/images/thinksync.png',
+        'assets/images/cluestitch.png',
+        'assets/images/achievement1.jpeg',
+        'assets/images/achievement2.JPG',
+        'assets/images/achievement3.jpg'
+      ];
+
+      imageUrls.forEach(url => {
+        const img = new Image();
+        img.src = url;
+      });
+    });
+  </script>
 </body>
 </html>
