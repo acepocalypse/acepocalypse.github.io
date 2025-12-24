@@ -101,3 +101,23 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
+/* ========================================
+   DARK MODE
+   ======================================== */
+[data-theme="dark"] .about-card {
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(102, 126, 234, 0.08);
+}
+
+[data-theme="dark"] .about-card:hover {
+  box-shadow: var(--shadow-xl), 0 0 30px rgba(102, 126, 234, 0.12);
+}
+
+[data-theme="dark"] .about-section h3 {
+  color: var(--color-gray-800);
+}
+
+[data-theme="dark"] .about-section p {
+  color: var(--color-gray-500);
+}
