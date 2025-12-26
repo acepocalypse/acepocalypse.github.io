@@ -18,12 +18,6 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-  <button class="nav-toggle" aria-label="Toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
   <nav class="projects-nav">
     <div class="nav-header">
       <h3>Projects</h3>
@@ -38,10 +32,11 @@
   <header>
     <h1><strong>My Projects</strong></h1>
     <p>Machine learning, Web Apps, Data Analysis works</p>
-    <nav class="back-nav">
-      <a href="../index.html">← Back to Home</a>
-    </nav>
   </header>
+
+  <nav class="back-nav">
+    <a href="../index.html" title="Back to Home">←</a>
+  </nav>
 
   <div class="main-content">
     <div class="projects-container">
@@ -197,36 +192,14 @@
   </div>
 
   <script>
-    // Navigation toggle functionality
-    const navToggle = document.querySelector('.nav-toggle');
-    const projectsNav = document.querySelector('.projects-nav');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    function toggleNav() {
-      navToggle.classList.toggle('open');
-      projectsNav.classList.toggle('open');
-    }
-
-    navToggle.addEventListener('click', toggleNav);
-
-    // Close navigation when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!projectsNav.contains(e.target) && !navToggle.contains(e.target) && projectsNav.classList.contains('open')) {
-        toggleNav();
-      }
-    });
-
     // Smooth scroll for anchor links
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
         if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-        // Close mobile nav after clicking
-        if (window.innerWidth <= 768) {
-          toggleNav();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
