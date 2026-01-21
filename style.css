@@ -346,6 +346,9 @@ header p {
 /* ========================================
    HOME PAGE - Card Fan
    ======================================== */
+/* ========================================
+   HOME PAGE - Card Fan
+   ======================================== */
 .card-fan {
   position: relative;
   width: 1000px;
@@ -353,49 +356,81 @@ header p {
   perspective: 1000px;
 }
 
-.card {
+/* Container holds position and rotation in the fan */
+.card-container {
   width: 200px;
   height: 250px;
-  background: var(--color-bg-card);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
   position: absolute;
   top: 50%;
   left: 50%;
   transform-origin: center bottom;
+  text-decoration: none; /* Inherit reset */
+  pointer-events: none; /* Disable interaction on basic box */
+}
+
+/* Enable interaction ONLY on the top half using a pseudo-element.
+   This creates a stable hit area that doesn't move when the visual card animates. */
+.card-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+/* The visual card that pops up */
+.card {
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  pointer-events: auto; /* Allow interaction with the card itself so clicks register */
 }
 
-.card:hover {
-  transform: scale(1.08) translateY(-100px) rotate(var(--angle));
+/* Visual card animation on container hover */
+.card-container:hover .card {
+  transform: scale(1.08) translateY(-100px);
   box-shadow: var(--shadow-xl);
+  z-index: 20; /* Ensure popped card is on top */
 }
 
-/* Positioning the cards in a fan layout using transform */
-.card:nth-child(1) { --angle: -35deg; transform: translateX(-100px) translateY(-50%) rotate(-35deg) translateY(-150px); background-image: url('assets/card-assets/card-about.png'); }
-.card:nth-child(2) { --angle: -25deg; transform: translateX(-100px) translateY(-50%) rotate(-25deg) translateY(-150px); background-image: url('assets/card-assets/card-linkedin.png'); }
-.card:nth-child(3) { --angle: -15deg; transform: translateX(-100px) translateY(-50%) rotate(-15deg) translateY(-150px); background-image: url('assets/card-assets/card-github.png'); }
-.card:nth-child(4) { --angle: -5deg;  transform: translateX(-100px) translateY(-50%) rotate(-5deg) translateY(-150px); background-image: url('assets/card-assets/card-email.png'); }
-.card:nth-child(5) { --angle: 5deg;   transform: translateX(-100px) translateY(-50%) rotate(5deg) translateY(-150px); background-image: url('assets/card-assets/card-skills.png'); }
-.card:nth-child(6) { --angle: 15deg;  transform: translateX(-100px) translateY(-50%) rotate(15deg) translateY(-150px); background-image: url('assets/card-assets/card-achievement.png'); }
-.card:nth-child(7) { --angle: 25deg;  transform: translateX(-100px) translateY(-50%) rotate(25deg) translateY(-150px); background-image: url('assets/card-assets/card-resume.png'); }
-.card:nth-child(8) { --angle: 35deg;  transform: translateX(-100px) translateY(-50%) rotate(35deg) translateY(-150px); background-image: url('assets/card-assets/card-projects.png'); }
+/* Hover state for the card itself (e.g. tracking mouse up) */
+.card:hover {
+  /* Keep same transform if mouse is on the card visual but off the container base */
+  transform: scale(1.08) translateY(-100px);
+  box-shadow: var(--shadow-xl);
+  z-index: 20;
+}
 
-.card:nth-child(1):hover { transform: translateX(-100px) translateY(-50%) rotate(-35deg) translateY(-275px) scale(1.08); }
-.card:nth-child(2):hover { transform: translateX(-100px) translateY(-50%) rotate(-25deg) translateY(-275px) scale(1.08); }
-.card:nth-child(3):hover { transform: translateX(-100px) translateY(-50%) rotate(-15deg) translateY(-275px) scale(1.08); }
-.card:nth-child(4):hover { transform: translateX(-100px) translateY(-50%) rotate(-5deg) translateY(-275px) scale(1.08); }
-.card:nth-child(5):hover { transform: translateX(-100px) translateY(-50%) rotate(5deg) translateY(-275px) scale(1.08); }
-.card:nth-child(6):hover { transform: translateX(-100px) translateY(-50%) rotate(15deg) translateY(-275px) scale(1.08); }
-.card:nth-child(7):hover { transform: translateX(-100px) translateY(-50%) rotate(25deg) translateY(-275px) scale(1.08); }
-.card:nth-child(8):hover { transform: translateX(-100px) translateY(-50%) rotate(35deg) translateY(-275px) scale(1.08); }
+/* Positioning the containers in a fan layout */
+.card-container:nth-child(1) { --angle: -35deg; transform: translateX(-100px) translateY(-50%) rotate(-35deg) translateY(-150px); }
+.card-container:nth-child(2) { --angle: -25deg; transform: translateX(-100px) translateY(-50%) rotate(-25deg) translateY(-150px); }
+.card-container:nth-child(3) { --angle: -15deg; transform: translateX(-100px) translateY(-50%) rotate(-15deg) translateY(-150px); }
+.card-container:nth-child(4) { --angle: -5deg;  transform: translateX(-100px) translateY(-50%) rotate(-5deg) translateY(-150px); }
+.card-container:nth-child(5) { --angle: 5deg;   transform: translateX(-100px) translateY(-50%) rotate(5deg) translateY(-150px); }
+.card-container:nth-child(6) { --angle: 15deg;  transform: translateX(-100px) translateY(-50%) rotate(15deg) translateY(-150px); }
+.card-container:nth-child(7) { --angle: 25deg;  transform: translateX(-100px) translateY(-50%) rotate(25deg) translateY(-150px); }
+.card-container:nth-child(8) { --angle: 35deg;  transform: translateX(-100px) translateY(-50%) rotate(35deg) translateY(-150px); }
+
+/* Apply backgrounds to the inner .card element based on container index */
+.card-container:nth-child(1) .card { background-image: url('assets/card-assets/card-about.png'); }
+.card-container:nth-child(2) .card { background-image: url('assets/card-assets/card-linkedin.png'); }
+.card-container:nth-child(3) .card { background-image: url('assets/card-assets/card-github.png'); }
+.card-container:nth-child(4) .card { background-image: url('assets/card-assets/card-email.png'); }
+.card-container:nth-child(5) .card { background-image: url('assets/card-assets/card-skills.png'); }
+.card-container:nth-child(6) .card { background-image: url('assets/card-assets/card-achievement.png'); }
+.card-container:nth-child(7) .card { background-image: url('assets/card-assets/card-resume.png'); }
+.card-container:nth-child(8) .card { background-image: url('assets/card-assets/card-projects.png'); }
+
 
 /* ========================================
    HOME PAGE - Responsive
@@ -419,28 +454,42 @@ header p {
     perspective: none;
     padding: 0 var(--spacing-md);
   }
-  
+
+  .card-container {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      top: auto;
+      left: auto;
+      transform: none !important;
+      animation: fadeInUp var(--transition-slow) ease forwards;
+      pointer-events: auto; /* Reset */
+  }
+
+  /* Reset transitions and layout for grid */
   .card {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none !important;
-    width: 100%;
-    height: 180px;
-    animation: fadeInUp var(--transition-slow) ease forwards;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   }
   
-  .card:nth-child(1) { animation-delay: 0.05s; }
-  .card:nth-child(2) { animation-delay: 0.1s; }
-  .card:nth-child(3) { animation-delay: 0.15s; }
-  .card:nth-child(4) { animation-delay: 0.2s; }
-  .card:nth-child(5) { animation-delay: 0.25s; }
-  .card:nth-child(6) { animation-delay: 0.3s; }
-  .card:nth-child(7) { animation-delay: 0.35s; }
-  .card:nth-child(8) { animation-delay: 0.4s; }
+  .card-container::after {
+      display: none; /* No split hit area on mobile */
+  }
   
-  .card:hover {
+  /* Stagger animation based on child index */
+  .card-container:nth-child(1) { animation-delay: 0.05s; }
+  .card-container:nth-child(2) { animation-delay: 0.1s; }
+  .card-container:nth-child(3) { animation-delay: 0.15s; }
+  .card-container:nth-child(4) { animation-delay: 0.2s; }
+  .card-container:nth-child(5) { animation-delay: 0.25s; }
+  .card-container:nth-child(6) { animation-delay: 0.3s; }
+  .card-container:nth-child(7) { animation-delay: 0.35s; }
+  .card-container:nth-child(8) { animation-delay: 0.4s; }
+  
+  /* Simple lift on hover for mobile */
+  .card-container:hover .card {
     transform: translateY(-4px) !important;
+    box-shadow: var(--shadow-md);
+    z-index: 1;
   }
   
   .home-header {
@@ -478,7 +527,7 @@ header p {
     max-width: 200px;
   }
   
-  .card {
+  .card-container, .card {
     height: 200px;
   }
 }
